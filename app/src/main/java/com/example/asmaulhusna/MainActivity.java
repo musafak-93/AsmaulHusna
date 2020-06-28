@@ -2,7 +2,12 @@ package com.example.asmaulhusna;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.WindowManager;
+
+import com.facebook.shimmer.ShimmerFrameLayout;
 
 public class MainActivity extends AppCompatActivity {
 
