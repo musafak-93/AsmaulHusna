@@ -19,17 +19,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     Context context1;
 
 
-
-    @Override
     public RecyclerViewAdapter(Context context, List<ActivityAsmaulHusna.User> userInformation) {
-        context = context;
+        context1 = context;
         values = userInformation;
     }
 
     @Override
-    public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecylerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.costum_layout_asmaul_husna, parent, false);
-        return new RecyclerViewHolder(view);
+        return new RecylerViewHolder(view);
     }
 
     @Override
