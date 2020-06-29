@@ -1,8 +1,12 @@
 package com.example.asmaulhusna;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.KeyEvent;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,7 +29,7 @@ public class ActivityAsmaulHusna extends AppCompatActivity {
         setContentView(R.layout.activity_asmaul_husna);
         setTitle("Asmaul Husna");
 
-        mediaPlayer = MediaPlayer.create(ActivityAsmaulHusna.this, R.raw.asmaul_husna);
+        //mediaPlayer = MediaPlayer.create(ActivityAsmaulHusna.this, R.raw.asmaul_husna);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView1 = (RecyclerView) findViewById(R.id.recycler_view1);
@@ -213,5 +217,37 @@ public class ActivityAsmaulHusna extends AppCompatActivity {
             this.arti = arti;
             this.bacaanlatin = bacaanlatin;
         }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        // return to the App's Home Activity
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            AlertDialog.Builder alBuilder = new AlertDialog.Builder(ActivityAsmaulHusna.this);
+            alBuilder.setMessage("Apa kamu ingin menutup aplikasi ini ?");
+            alBuilder.setPositiveButton("Iya", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent keluar = new Intent(Intent.ACTION_MAIN);
+                    keluar.addCategory(Intent.CATEGORY_HOME);
+                    keluar.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(keluar);
+                }
+            }).setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+
+            final AlertDialog dialog;
+
+            dialog = alBuilder.create();
+            dialog.show();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
