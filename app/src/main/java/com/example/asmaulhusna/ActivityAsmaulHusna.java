@@ -44,4 +44,28 @@ public class ActivityAsmaulHusna extends AppCompatActivity {
         recyclerView1.setAdapter(recyclerViewAdapterBacaan);
 
     }
+
+    public class User2 {
+        private String bacaan, arti, bacaanlatin;
+
+
+        public String getBacaan() {
+            return bacaan;
+        }
+
+        public String getArti() {
+            return arti;
+        }
+
+        public String getBacaanLatin() {
+            return bacaanlatin;
+        }
+
+
+        public User2(String bacaan, String arti, String bacaanlatin) {
+            this.bacaan = bacaan;
+            this.arti = arti;
+            this.bacaanlatin = bacaanlatin;
+        }
+    }
 }
