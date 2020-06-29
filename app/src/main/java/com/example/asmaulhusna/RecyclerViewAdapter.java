@@ -5,8 +5,11 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -51,7 +54,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public int getItemCount() {
-        return 0;
+    public int getItemCount() { return values.size();}
+
+    public class RecylerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+
+        TextView ayat, bacaan, arti, no;
+        CardView cardView;
+        LinearLayout linearLayout;
     }
 }
