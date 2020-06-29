@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ActivityAsmaulHusna extends AppCompatActivity {
 
     RecyclerView recyclerView, recyclerView1;
@@ -43,6 +46,15 @@ public class ActivityAsmaulHusna extends AppCompatActivity {
         recyclerViewAdapterBacaan = new RecyclerViewAdapterBacaan(getApplicationContext(), getUserInformationn());
         recyclerView1.setAdapter(recyclerViewAdapterBacaan);
 
+    }
+
+    private List<User2> getUserInformationn() {
+        List<User2> userList = new ArrayList<User2>();
+        userList.add(new User2("أشهد أن لا اله الا الله وأشهد ان محمد رسول الله", "Asyhadu an laa ilaaha illallāh wa asyhadu anna Muhammad Rasuulullāh.", "Aku bersaksi bahwa tiada Tuhan melainkan Allah dan Aku bersaksi Nabi Muhammad utusan Allah."));
+        userList.add(new User2("اللهُمَّ صَلِّ عَلَى مُحَمَّد     يَارَبِّ صَلِّ عَلَيْهِ وَسَلِّم", "Allahumma sholli ala muhammad ya robbi sholli alaihi wasallim", "Ya Allah, limpahkanlah rahmat atas Nabi Muhammad Ya Tuhanku, limpahkanlah rahmat dan kesejahteraan atas beliau"));
+        userList.add(new User2("وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَىٰ فَادْعُوهُ بِهَا ۖ وَذَرُوا الَّذِينَ يُلْحِدُونَ فِي أَسْمَائِهِ ۚ سَيُجْزَوْنَ مَا كَانُوا يَعْمَلُونَ", "Walillahil asmaa-ul husna faad'uuhu bihaa wadzaruul-ladziina yulhiduuna fii asmaa-ihi sayujzauna maa kaanuu ya'maluun(a)", "Hanya milik Allah asmaa-ul husna, maka bermohonlah kepada-Nya dengan menyebut asmaa-ul husna itu dan tinggalkanlah orang-orang yang menyimpang dari kebenaran dalam (menyebut) nama-nama-Nya. Nanti mereka akan mendapat balasan terhadap apa yang telah mereka kerjakan."));
+
+        return userList;
     }
 
     public class User2 {
