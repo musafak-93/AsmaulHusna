@@ -57,6 +57,33 @@ public class ActivityAsmaulHusna extends AppCompatActivity {
         return userList;
     }
 
+    public class User {
+        private String ayat, bacaan, arti, no;
+
+        public String getAyat() {
+            return ayat;
+        }
+
+        public String getBacaan() {
+            return bacaan;
+        }
+
+        public String getArti() {
+            return arti;
+        }
+
+        public String getNo() {
+            return no;
+        }
+
+        public User(String no, String ayat, String bacaan, String arti) {
+            this.no = no;
+            this.ayat = ayat;
+            this.bacaan = bacaan;
+            this.arti = arti;
+        }
+    }
+
     public class User2 {
         private String bacaan, arti, bacaanlatin;
 
