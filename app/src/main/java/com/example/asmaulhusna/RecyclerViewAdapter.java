@@ -71,5 +71,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             cardView = (CardView) itemView.findViewById(R.id.card_view);
             linearLayout = (LinearLayout) itemView.findViewById(R.id.tes);
         }
+
+        @Override
+        public void onClick(View view){
+
+        }
     }
 }
