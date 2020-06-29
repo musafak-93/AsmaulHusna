@@ -14,13 +14,13 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyler_view1"
+            android:id="@+id/recycler_view1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="5dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyler_view"
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="5dp"/>
