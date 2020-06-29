@@ -61,5 +61,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView ayat, bacaan, arti, no;
         CardView cardView;
         LinearLayout linearLayout;
+
+        public RecylerViewHolder(View itemView) {
+            super(itemView);
+            ayat = (TextView) itemView.findViewById(R.id.tv_ayat);
+            bacaan = (TextView) itemView.findViewById(R.id.tv_bacaan);
+            arti = (TextView) itemView.findViewById(R.id.tv_arti);
+            no = (TextView) itemView.findViewById(R.id.tv_no);
+            cardView = (CardView) itemView.findViewById(R.id.card_view);
+            linearLayout = (LinearLayout) itemView.findViewById(R.id.tes);
+        }
     }
 }
