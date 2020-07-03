@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.TextView;
 
@@ -948,5 +950,24 @@ public class ActivityAsmaulHusnaDetail extends AppCompatActivity {
 
             meneladani.setText("Ketika seseorang dalam kesulitan atau berduka, bacalah Yaa Shobuur sebanyak tiga ribu kali, dengan izin Allah, Allah akan memberinya jalan keluar. Jika Yaa Shobuur dibaca sebanyak seribu kali, Allah akan memberinya ilham berupa kesabaran atas segala kesusahan dan bala bencana yang menimpanya.");
         }
+    }
+
+    //Tombol Kembali
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent myIntent = new Intent(getApplicationContext(), ActivityAsmaulHusna.class);
+        startActivityForResult(myIntent, 0);
+        finish();
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            Intent myIntent = new Intent(getApplicationContext(), ActivityAsmaulHusna.class);
+            startActivityForResult(myIntent, 0);
+            finish();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
