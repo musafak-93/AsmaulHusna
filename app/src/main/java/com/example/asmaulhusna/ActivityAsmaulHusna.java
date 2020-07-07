@@ -223,8 +223,6 @@ public class ActivityAsmaulHusna extends AppCompatActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         // return to the App's Home Activity
         if ((keyCode == KeyEvent.KEYCODE_BACK)) {
-            mediaPlayer.stop();
-            mediaPlayer.reset();
             AlertDialog.Builder alBuilder = new AlertDialog.Builder(ActivityAsmaulHusna.this);
             alBuilder.setMessage("Apa kamu ingin menutup aplikasi ini ?");
             alBuilder.setPositiveButton("Iya", new DialogInterface.OnClickListener() {
@@ -241,7 +239,6 @@ public class ActivityAsmaulHusna extends AppCompatActivity {
                     dialog.cancel();
                 }
             });
-
             final AlertDialog dialog;
 
             dialog = alBuilder.create();
