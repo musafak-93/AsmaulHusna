@@ -21,7 +21,6 @@ public class ActivityAsmaulHusna extends AppCompatActivity {
     RecyclerViewAdapterBacaan recyclerViewAdapterBacaan;
     RecyclerView.LayoutManager recyclerViewLayoutManager;
     RecyclerView.LayoutManager recyclerViewLayoutManager1;
-    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,6 @@ public class ActivityAsmaulHusna extends AppCompatActivity {
         setContentView(R.layout.activity_asmaul_husna);
         setTitle("Asmaul Husna");
 
-        //mediaPlayer = MediaPlayer.create(ActivityAsmaulHusna.this, R.raw.asmaul_husna);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView1 = (RecyclerView) findViewById(R.id.recycler_view1);
